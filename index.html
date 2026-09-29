@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loporepem Ipipsupum</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <h1>«Loporepem Ipipsupum» Generator</h1>
+        <p class="subtitle">
+          Generate placeholder text inspired by
+          <a href="https://es.wikipedia.org/wiki/Jerigonza" target="_blank" rel="noreferrer">Jerigonza</a>, or translate any text into it.
+        </p>
+      </section>
+
+      <section class="tabs" aria-label="Mode selector">
+        <button id="loremTab" class="tab-button is-active" type="button" data-mode="lorem">Lorem Ipsum</button>
+        <button id="translatorTab" class="tab-button" type="button" data-mode="translator">Translator</button>
+      </section>
+
+      <section class="panel controls mode-panel is-active" data-mode-panel="lorem">
+        <div class="field-grid">
+          <label class="field">
+            <span>Paragraphs</span>
+            <input id="paragraphCount" type="number" min="1" max="12" value="3" />
+          </label>
+        </div>
+
+        <div class="actions generator-actions">
+          <button id="generateBtn" type="button">Generate</button>
+        </div>
+      </section>
+
+      <section class="panel controls mode-panel" data-mode-panel="translator" hidden>
+        <label class="field translator-field" for="sourceText">
+          <span>Text to translate</span>
+          <textarea id="sourceText" placeholder="Type or paste text..."></textarea>
+        </label>
+
+        <div class="actions translator-actions">
+          <button id="translateBtn" type="button">Translate</button>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="output-header">
+          <h2>Result</h2>
+          <div class="output-actions">
+            <span id="copyFeedback" class="copy-feedback" aria-live="polite"></span>
+            <button id="copyBtn" type="button" class="secondary copy-button">Copy</button>
+          </div>
+        </div>
+        <textarea id="output" rows="14" readonly></textarea>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
