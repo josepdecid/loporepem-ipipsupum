@@ -1,21 +1,17 @@
 # Loporepem Ipipsupum Generator
 
-A minimal static app that generates lorem ipsum-style placeholder text transformed into [jerigonza](https://en.wikipedia.org/wiki/Jeringonza).
+![Loporepem Ipipsupum Generator screenshot](./og-image.png)
+
+A tiny chaotic machine that spits out placeholder text inspired by [jerigonza](https://en.wikipedia.org/wiki/Jeringonza), for when regular lorem ipsum feels a little too emotionally stable.
+
+Live version: [josepdecid.com/loporepem-ipipsupum/](https://josepdecid.com/loporepem-ipipsupum/), already out there on the internet doing important fake-text business.
 
 ## Run locally
 
-### Option 1: Open directly
+No dependencies, no build step, no bundler summoning ritual, no tiny goblin hiding inside `node_modules`.
 
-Open `index.html` in your browser.
-
-### Option 2: Use a local server
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
+Just open `index.html` in your browser and behold the nonsense.
 
 ## Deployment
 
-This site is deployed with GitHub Pages through the workflow in `.github/workflows/deploy.yml`.
+This thing deploys with GitHub Pages through `.github/workflows/deploy.yml`, which is a very fancy way of saying “git push, and the weird text box goes live.”
